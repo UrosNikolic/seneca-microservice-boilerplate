@@ -1,0 +1,1 @@
+# Seneca microservice boilerplate

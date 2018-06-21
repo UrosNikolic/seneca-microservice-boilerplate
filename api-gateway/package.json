@@ -1,0 +1,21 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "description": "Seneca express api gateway, maps rest api routes to seneca actions",
+  "main": "api-gateway.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "seneca": "^3.6.0",
+    "seneca-balance-client": "^0.7.0",
+    "seneca-mesh": "^0.12.0",
+    "seneca-web": "^2.2.0",
+    "seneca-web-adapter-express": "^1.1.1"
+  }
+}
