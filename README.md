@@ -1,5 +1,9 @@
 # Seneca microservice boilerplate
 
+## Microservice design using Api Gateway
+
+![Microservice design](./docs/images/microservice.png)
+
 ## TODO
 
 - add documentation
