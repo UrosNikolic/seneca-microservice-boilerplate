@@ -11,3 +11,4 @@
 - add Docker and Kubernetes setup for deployment
 - add tests
 - add microservice examples using MongoDb and Postgre or MySql
+- add seneca microservice with promises
