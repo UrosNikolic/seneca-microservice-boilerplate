@@ -41,6 +41,38 @@ You can easily use  2 or more services together, to extend each other, to proces
 api routes to seneca actions
 - Api gateway holds authentication logic(to be added)
 
+Routes.js folder contains routes separated into files(you can separate it according to your business logic, permissions etc.. depends on your needs)
+There you map each api rest route to seneca action.
+
+Here you can see that we map /test route to seneca.add method that reacts to 'role:admin,cmd:test' pattern
+```javascript
+'use strict'
+const AdminRoutes =
+    {
+        pin: 'role:admin,cmd:*',
+        map: {
+          test: {
+            GET: true,
+            alias: '/test'
+          }
+    }
+
+const AdminPlugin = function plugin (options) {
+  const seneca = this;
+
+  seneca.add('role:admin,cmd:test', (msg, done) => {
+    this.act({role:'microservice',cmd:'promise'}, (err, msg) => {
+      done(null, msg)
+    })
+  })
+}
+
+module.exports = {
+    AdminRoutes,
+    AdminPlugin
+}
+```
+
 ### Microservice(using callbacks)
 
 - Microservice is using seneca to recieve and emit events and react on api gateway sent events.
