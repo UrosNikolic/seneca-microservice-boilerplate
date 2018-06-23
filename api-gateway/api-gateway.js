@@ -3,10 +3,14 @@ const Express = require('express')
 const Seneca = require('seneca')
 const Web = require('seneca-web')
 
+// load env file
+require('dotenv').config()
+
 // import routes and plugins
 const { AdminRoutes, AdminPlugin } = require('./routes/admin-routes')
 const { AdminPromiseRoutes, AdminPromisePlugin } = require('./routes/routes-with-promises')
 
+//define routes
 const Routes = [
   AdminRoutes,
   AdminPromiseRoutes
@@ -25,14 +29,17 @@ const config = {
 }
 
 const seneca = Seneca()
+
+// define plugins
 seneca.use(AdminPromisePlugin)
 seneca.use(AdminPlugin)
+
 seneca.use(Web, config)
 seneca.use('mesh')
 seneca.ready(() => {
     const server = seneca.export('web/context')()
 
-    server.listen('4000', (err) => {
-        console.log(err || 'server started on: 4000')
+    server.listen(process.env.PORT, (err) => {
+        console.log(err || `server started on: ${process.env.PORT}`)
     })
 })

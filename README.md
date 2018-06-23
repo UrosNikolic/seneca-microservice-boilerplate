@@ -6,6 +6,9 @@ Boilerplate for developing microservice based architecture using [Seneca.js](htt
 
 ![Microservice design](./docs/images/microservice.png)
 
+## Requirements
+
+> node -v 10+
 
 ## Why Seneca.js?
 

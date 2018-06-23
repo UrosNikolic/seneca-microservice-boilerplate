@@ -1,4 +1,7 @@
 const Seneca = require('seneca')
+// load env file
+require('dotenv').config()
+
 const BASES = (process.env.BASES || process.argv[3] || '').split(',')
 const SILENT = process.env.SILENT || process.argv[4] || 'true'
 const HOST = process.env.HOST || process.argv[4] || '127.0.0.1'

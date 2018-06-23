@@ -4,7 +4,8 @@
   "description": "Seneca express api gateway, maps rest api routes to seneca actions",
   "main": "api-gateway.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api-gateway.js"
   },
   "author": "",
   "license": "ISC",
