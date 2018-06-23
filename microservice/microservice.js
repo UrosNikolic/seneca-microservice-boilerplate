@@ -18,10 +18,13 @@ Seneca({
         }
     })
     .ready(function(){
-        console.log(this.id)
-        this.add({cmd:'test'}, (args, done) => {
-            done({message: 'Test microservice responds to api gateway /test route.'});
-        })
+      console.log(this.id)
+      this.add({cmd:'test'}, (args, done) => {
+        done({message: 'Test microservice responds to api gateway /test route.'});
+      })
+      this.add({cmd:'promise'}, (args, done) => {
+        done({message: 'Test microservice responds to api gateway /promise route.'});
+      })
     })
 
 

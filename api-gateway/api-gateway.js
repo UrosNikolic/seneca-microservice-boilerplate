@@ -3,10 +3,12 @@ const Express = require('express')
 const Seneca = require('seneca')
 const Web = require('seneca-web')
 
-const { AdminRoutes, AdminPlugin } = require('./routes/admin-routes.js')
+const { AdminRoutes, AdminPlugin } = require('./routes/admin-routes')
+const { AdminPromiseRoutes, AdminPromisePlugin } = require('./routes/routes-with-promise')
 
 const Routes = [
-    AdminRoutes
+  AdminRoutes,
+  AdminPromiseRoutes
 ]
 
 const app = Express()
@@ -22,6 +24,7 @@ const config = {
 }
 
 const seneca = Seneca()
+seneca.use(AdminPromisePlugin)
 seneca.use(AdminPlugin)
 seneca.use(Web, config)
 seneca.use('mesh')
