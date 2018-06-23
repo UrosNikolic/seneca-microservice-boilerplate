@@ -121,5 +121,5 @@ Once you've joined, you don't even need the bases anymore, as the network keeps 
 - add Docker and Kubernetes setup for deployment
 - add tests
 - add microservice examples using MongoDb and Postgre or MySql
-- add seneca microservice with promises
 - api gateway authentication
+- add fanout service
