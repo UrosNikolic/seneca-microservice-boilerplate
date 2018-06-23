@@ -96,7 +96,7 @@ act({role:'microservice',cmd:'test'})
     done(new Error('I have been rejected!'))
   })
 ```
-You
+You can refer to [this part of the code](https://github.com/UrosNikolic/seneca-microservice-boilerplate/blob/master/api-gateway/routes/admin-routes.js#L32) to see promises in action.
 
 ### Microservice(using MongoDB) - to be added
 
