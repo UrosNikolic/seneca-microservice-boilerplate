@@ -12,6 +12,7 @@ Boilerplate for developing microservice based architecture using [Seneca.js](htt
 - **Avoiding service coupling**
 
 If service **A** knows that it needs to send a message to service **B**, those services are coupled.
+
 You want the flow to look like this:
 
 Microservice **A** sends a message and does not know who gets it. **B** receives it but doesn't know who sent it.
