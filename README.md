@@ -19,6 +19,7 @@ Microservice **A** sends a message and does not know who gets it. **B** receives
 Now microservices are fully decoupled and you can deploy different versions of **A** and different versions of **B**.
 
 Now we have another problem, Microservice **A** still needs to somehow find Microservice **B**.
+
 We solve that by using [seneca-mesh](https://github.com/senecajs/seneca-mesh).
 Mesh uses swim algorithm for automatic service discovery.
 
