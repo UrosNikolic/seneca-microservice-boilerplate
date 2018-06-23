@@ -11,14 +11,15 @@ Boilerplate for developing microservice based architecture using [Seneca.js](htt
 
 - **Avoiding service coupling**
 
-If service A knows that it needs to send a message to service B, those services are coupled.
+If service **A** knows that it needs to send a message to service **B**, those services are coupled.
 You want the flow to look like this:
 
-Microservice A sends a message and does not know who gets it. B receives it but doesn't know who sent it.
-Now microservices are fully decoupled and you can deploy different versions of A and different versions of B.
+Microservice **A** sends a message and does not know who gets it. **B** receives it but doesn't know who sent it.
+Now microservices are fully decoupled and you can deploy different versions of **A** and different versions of **B**.
 
-Now we have another problem, Microservice A still needs to somehow find Microservice B.
-We solve that by using seneca-mesh. Mesh uses swim algorithm for automatic service discovery.
+Now we have another problem, Microservice **A** still needs to somehow find Microservice **B**.
+We solve that by using [seneca-mesh](https://github.com/senecajs/seneca-mesh).
+Mesh uses swim algorithm for automatic service discovery.
 
 - **Pattern matching**
 
