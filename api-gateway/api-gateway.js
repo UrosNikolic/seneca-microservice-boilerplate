@@ -3,8 +3,9 @@ const Express = require('express')
 const Seneca = require('seneca')
 const Web = require('seneca-web')
 
+// import routes and plugins
 const { AdminRoutes, AdminPlugin } = require('./routes/admin-routes')
-const { AdminPromiseRoutes, AdminPromisePlugin } = require('./routes/routes-with-promise')
+const { AdminPromiseRoutes, AdminPromisePlugin } = require('./routes/routes-with-promises')
 
 const Routes = [
   AdminRoutes,
