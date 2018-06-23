@@ -76,6 +76,7 @@ module.exports = {
 ### Microservice(using callbacks)
 
 - Microservice is using seneca to recieve and emit events and react on api gateway sent events.
+
 **Note:** Microservice is not obligated to communicate to Api gateway, services can also just communicate between
 each other.
 
