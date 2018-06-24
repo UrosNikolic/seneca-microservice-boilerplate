@@ -10,7 +10,6 @@ const HOST = process.env.HOST || process.argv[4] || '127.0.0.1'
 const BASES = (process.env.BASES || process.argv[5] || '').split(',')
 const SILENT = process.env.SILENT || process.argv[6] || 'true'
 
-
 require('seneca')({
     tag: TAG,
     internal: {logger: require('seneca-demo-logger')},

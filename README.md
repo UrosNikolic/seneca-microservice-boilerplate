@@ -113,6 +113,31 @@ Once you've joined, you don't even need the bases anymore, as the network keeps 
 
 ## Local Development
 
+We are using [fuge](https://github.com/apparatus/fuge).
+It provides an execution environment for developing microservice systems, eliminating shell hell and significantly reducing developer friction.
+
+After you install **fuge** go into each directory and install dependencies
+
+```
+cd api-gateway
+npm install
+
+cd ../base
+npm install
+
+cd ../microservice
+npm install
+
+cd ../fuge
+fuge shell
+```
+
+after fuge starts run
+```
+start all
+```
+and you can view all running services using fuge **ps** command
+
 
 ## Deployment using Docker and Kubernetes
 

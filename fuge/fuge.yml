@@ -1,0 +1,42 @@
+fuge_global:
+  tail: true
+  monitor: false
+  auto_generate_environment: false
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '**/*.log'
+  environment:
+    - BASES=127.0.0.1:39000,127.0.0.1:39001
+    - HOST=127.0.0.1
+    - SILENT=true
+base0:
+  type: node
+  path: ../base
+  run: node base.js
+  ports:
+    - main=39000
+  environment:
+    - TAG=base0
+    - PORT=39000
+#base1:
+#  type: node
+#  path: ../base
+#  run: node base.js
+#  ports:
+#    - main=39001
+#  environment:
+#    - TAG=base1
+#    - PORT=39001
+api-gateway:
+  type: node
+  path: ../api-gateway
+  run: node api-gateway.js
+  ports:
+    - main=4000
+  environment:
+    - PORT=0
+microservice:
+  type: node
+  path: ../microservice
+  run: node microservice.js
