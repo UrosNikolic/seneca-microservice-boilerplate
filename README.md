@@ -151,3 +151,4 @@ and you can view all running services using fuge **ps** command
 - add microservice examples using MongoDb and Postgre or MySql
 - api gateway authentication
 - add fanout service
+- centralized logging with ELK stack
