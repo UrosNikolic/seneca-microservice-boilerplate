@@ -138,17 +138,3 @@ start all
 ```
 and you can view all running services using fuge **ps** command
 
-
-## Deployment using Docker and Kubernetes
-
-
-## TODO
-
-- add documentation
-- add fuge for local development
-- add Docker and Kubernetes setup for deployment
-- add tests
-- add microservice examples using MongoDb and Postgre or MySql
-- api gateway authentication
-- add fanout service
-- centralized logging with ELK stack
